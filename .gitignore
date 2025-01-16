@@ -1,0 +1,68 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Entornos
+.env
+.env.local
+.env.*.local
+
+# Directorios de caché y salida
+.cache/
+dist/
+build/
+coverage/
+public/
+.temp/
+.tmp/
+out/
+
+# Archivos específicos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# Configuraciones de IDE y editores
+.vscode/
+.idea/
+*.iml
+
+# Archivos de lock innecesarios (si usas solo uno de estos, elimina los demás)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Datos y cargas temporales
+*.seed
+*.pid
+*.pid.lock
+*.gz
+*.sqlite
+*.sqlite3
+uploads/
+
+# Configuración de pruebas y reportes
+.nyc_output/
+coverage/
+*.lcov
+
+# Despliegue y CI/CD
+docker-compose.override.yml
+*.tfstate
+*.tfstate.backup
+*.log
+
+# Archivos de seguridad y claves
+*.key
+*.pem
+*.crt
+
+# Otros archivos temporales
+!.gitkeep
