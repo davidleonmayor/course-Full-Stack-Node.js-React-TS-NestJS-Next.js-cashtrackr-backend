@@ -16,8 +16,4 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use("/api/budget", budgetRouter);
 app.use("/api/auth", authRouter);
 
-app.use("/", (req, res) => {
-  res.send("Ok");
-});
-
 export default app;

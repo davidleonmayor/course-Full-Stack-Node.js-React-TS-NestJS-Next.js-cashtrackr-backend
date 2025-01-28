@@ -7,14 +7,7 @@ import { generateJWT } from "../utils/jwt";
 
 export class AuthController {
   static createAccount = async (req: Request, res: Response) => {
-    const { email, password, confirmPassword } = req.body;
-
-    // check if password and confirmPassword match
-    if (password !== confirmPassword) {
-      const error = new Error("Las contraseñas no coinciden");
-      res.status(400).json({ error: error.message });
-      return;
-    }
+    const { email, password } = req.body;
 
     // Prevenir duplicados
     const userExists = await User.findOne({ where: { email } });

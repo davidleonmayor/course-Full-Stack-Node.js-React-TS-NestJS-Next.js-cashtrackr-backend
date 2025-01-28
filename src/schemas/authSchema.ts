@@ -49,20 +49,6 @@ export const UserRegistrationSchema: Schema = {
         "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
     },
   },
-  confirmPassword: {
-    in: ["body"],
-    exists: {
-      errorMessage: "Password confirmation is required",
-    },
-    custom: {
-      options: (value: string, { req }) => {
-        if (value !== req.body.password) {
-          throw new Error("Password confirmation does not match password");
-        }
-        return true;
-      },
-    },
-  },
 };
 
 export const UserConfirmationSchema: Schema = {
